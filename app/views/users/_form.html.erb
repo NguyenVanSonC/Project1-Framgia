@@ -1,0 +1,27 @@
+<%= form_for @user do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+  <%= f.label :name %>
+  <%= f.text_field :name, placeholder: t(".place_name") %>
+  <%= f.label :address %>
+  <%= f.text_field :address, placeholder: t(".place_address") %>
+  <%= f.label :email %>
+  <%= f.email_field :email, placeholder: t(".place_email") %>
+  <%= f.label :age %>
+  <%= f.number_field :age, placeholder: t(".place_age") %>
+  <%= f.label :gender %>
+  <div class="container_radio">
+    <p><%= t ".male" %></p>
+    <%= f.radio_button :gender, t(".male"), :checked => true, id: "radio_button_one" %>
+    <p><%= t ".female" %></p>
+    <%= f.radio_button :gender, t(".female"), id: "radio_button_two" %>
+  </div>
+  <%= f.label :phone_number %>
+  <%= f.text_field :phone_number, placeholder: t(".place_phone") %>
+  <%= f.label :birthday %>
+  <%= f.date_field :birthday %>
+  <%= f.label :password %>
+  <%= f.password_field :password, placeholder: t(".place_password") %>
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation, placeholder: t(".place_pass") %>
+  <%= f.submit yield(:button_text), class: "submit_signup" %>
+<% end %>

@@ -31,6 +31,12 @@
 
 en:
   hello: "Hello world"
+  create_user: "Account create success"
+  not_found: "Not Found This User!"
+  update: "Update Successful!"
+  waring_login: "Invalid email/password combination"
+  success_login: "Welcome ,Shopping Fun!"
+  login: "Please Login Your Account"
   static_pages:
     home:
       title: "Home"
@@ -84,3 +90,34 @@ en:
       available: "Availability:"
       condition: "Condition:"
       brand: "Brand:"
+  users:
+    new:
+      title: "Sign Up"
+      button: "Create Account"
+      header: "New User Signup!"
+    form:
+      male: "Male"
+      female: "Female"
+      place_name: "Name"
+      place_email: "Email"
+      place_age: "Age"
+      place_address: "Address"
+      place_phone: "Phone Number"
+      place_password: "Your Password"
+      place_pass: "Confirmation PassWord"
+    show:
+      user_profile: "User Profile Card"
+      email: "Email: "
+      age: "Age: "
+      birthday: "BirthDay: "
+      gender: "Gender: "
+      phone: "Phone: "
+      contact: "Contact"
+    edit:
+      title: "Edit User"
+      save: "Update"
+      header: "Update Your Profile"
+  shared:
+    error_messages:
+      messages: "The Errors Content: "
+      error: "error"
