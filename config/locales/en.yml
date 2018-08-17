@@ -41,9 +41,18 @@ en:
     home:
       title: "Home"
       features: "Features Items"
-    sidebar:
       price: "Price Range"
       category: "Category"
+    sidebar:  
+      wishlist: "Wishlist"
+      checkout: "Checkout"
+      cart: "Cart"
+      shop: "Shop"
+      products: "Products"
+      products-details: "Product Details"
+      blog: "Blog"
+      blog-list: "Blog List"
+      Blog Single: "Blog Single"
   layouts:
     header:
       home: "Home"
@@ -54,15 +63,6 @@ en:
       profile: "Profile"
       setting: "Settings"
       account: "Account"
-      wishlist: "Wishlist"
-      checkout: "Checkout"
-      cart: "Cart"
-      shop: "Shop"
-      products: "Products"
-      products-details: "Product Details"
-      blog: "Blog"
-      blog-list: "Blog List"
-      Blog Single: "Blog Single"
     slider:
       name-shop: "E-COMMERCE"
       get-it: "Get it now"
@@ -121,3 +121,11 @@ en:
     error_messages:
       messages: "The Errors Content: "
       error: "error"
+  sessions:
+    new:
+      title: "Login"
+      login: "Login to your account"
+      remember: "Remember me on this computer"
+      submit: "Login"
+      sigup: "New user?"
+      sigup_path: "Sign Up Now!"
