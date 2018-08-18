@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   ratyrate_rater
   attr_accessor :remember_token
+  has_many :comments, dependent: :destroy
   before_save :downcase_email
   validates :name, presence: true, length: {maximum: Settings.maxname}
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i

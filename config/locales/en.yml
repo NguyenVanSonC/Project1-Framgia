@@ -43,7 +43,7 @@ en:
       features: "Features Items"
       price: "Price Range"
       category: "Category"
-    sidebar:  
+    sidebar:
       wishlist: "Wishlist"
       checkout: "Checkout"
       cart: "Cart"
@@ -55,16 +55,6 @@ en:
       Blog Single: "Blog Single"
       price: "Price Range"
       category: "Category"
-    sidebar:
-      wishlist: "Wishlist"
-      checkout: "Checkout"
-      cart: "Cart"
-      shop: "Shop"
-      products: "Products"
-      products-details: "Product Details"
-      blog: "Blog"
-      blog-list: "Blog List"
-      Blog Single: "Blog Single"
   layouts:
     header:
       home: "Home"
@@ -75,6 +65,15 @@ en:
       profile: "Profile"
       setting: "Settings"
       account: "Account"
+      wishlist: "Wishlist"
+      checkout: "Checkout"
+      cart: "Cart"
+      shop: "Shop"
+      products: "Products"
+      products-details: "Product Details"
+      blog: "Blog"
+      blog-list: "Blog List"
+      Blog Single: "Blog Single"
     slider:
       name-shop: "E-COMMERCE"
       get-it: "Get it now"
@@ -92,6 +91,12 @@ en:
       max: "Max"
     filter_alphabet:
       filter: "AlPhabet"
+    404:
+      bring: "Bring me back Home"
+      message: "Uh... So it looks like you brock something. The page you are looking for has up and Vanished."
+      couldfind: "We Couldn’t Find this Page"
+      opp: "OPPS!"
+      title: "404"
   products:
     products:
       product_not_found: "Product not found"
@@ -140,6 +145,8 @@ en:
     error_messages:
       messages: "The Errors Content: "
       error: "error"
+    search:
+      search: "Search"
   sessions:
     new:
       title: "Login"
@@ -148,3 +155,20 @@ en:
       submit: "Login"
       sigup: "New user?"
       sigup_path: "Sign Up Now!"
+  comments:
+    index:
+      header: "Write Your Comment"
+    comment:
+      reply: "Reply"
+      delete: "Delete"
+      sure: "Are You Sure?"
+      edit: "Edit"
+      comments: "Reply comments"
+      say: "Says : "
+    form:
+      submit: "Submit Comment"
+    sub_comments:
+      delete: "Delete"
+      sure: "Are You Sure?"
+      edit: "Edit"
+      say: "Says : "

@@ -1,0 +1,6 @@
+<%= form_tag url_for(controller: "search_products",
+  action: "index"), method: :get, remote: true do %>
+  <%= text_field_tag :query, params[:query],
+  placeholder: t(".search") %>
+  <button type="submit" class="submit-search"><i class="fa fa-search"></i></button>
+<% end %>

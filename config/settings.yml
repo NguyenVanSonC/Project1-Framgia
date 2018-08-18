@@ -15,3 +15,5 @@ maximum_phone: 15
 pageproduct: 14
 num_features_items: 6
 num_stars: 10
+maxcomment: 200
+pagecomment: 20
