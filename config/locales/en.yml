@@ -31,3 +31,40 @@
 
 en:
   hello: "Hello world"
+  static_pages:
+    home:
+      title: "Home"
+      features: "Features Items"
+      price: "Price Range"
+      category: "Category"
+  layouts:
+    header:
+      home: "Home"
+      contact: "Contact"
+      signup: "Sign Up"
+      login: "Login"
+      logout: "Logout"
+      profile: "Profile"
+      setting: "Settings"
+      account: "Account"
+      wishlist: "Wishlist"
+      checkout: "Checkout"
+      cart: "Cart"
+      shop: "Shop"
+      products: "Products"
+      products-details: "Product Details"
+      blog: "Blog"
+      blog-list: "Blog List"
+      Blog Single: "Blog Single"
+    slider:
+      name-shop: "E-COMMERCE"
+      get-it: "Get it now"
+      header: "Free E-Commerce"
+      title: "Fashion has two purposes: comfort and love. Beauty comes when fashion succeeds"
+    footer:
+      name-shop: "E-COMMERCE"
+      title: "Fashion has two purposes: comfort and love. Beauty comes when fashion succeeds"
+      letter: "Circle of Hands"
+      time: "24 DEC 2014"
+      map: "505 S Atlantic Ave Virginia Beach, VA(Virginia)"
+      copy: "Copyright © 2013 E-Commerce Inc. All rights reserved."
