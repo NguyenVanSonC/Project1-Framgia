@@ -1,6 +1,6 @@
 class Admin::BaseController < ApplicationController
   layout "admin"
-  # before_filter :is_admin?
+  before_action :is_admin?
 end
 
 class Admin::CategoriesController < Admin::BaseController
@@ -12,6 +12,7 @@ class Admin::CategoriesController < Admin::BaseController
 
   def new
     @category = Category.new
+    @category_parents = Category.cate_parents
   end
 
   def create

@@ -51,12 +51,9 @@
           <%= t ".usd" %>
           <%= @product.cost %>
         </span>
-        <label><%= t ".quantity" %></label>
-        <input type="text" value="" />
-        <button type="button" class="btn btn-fefault cart">
-          <i class="fa fa-shopping-cart"></i>
-          <%= t ".add-cart" %>
-        </button>
+        <div id="order-item">
+          <%= render partial: "carts/form" %>
+        </div>
       </span>
       <p><b><%= t ".available" %></b></p>
       <p><b><%= t ".condition" %></b></p>

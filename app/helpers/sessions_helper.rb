@@ -6,6 +6,8 @@ module SessionsHelper
   def logout
     forget current_user
     session.delete :user_id
+    session.delete :cart
+    session.delete :size
     @current_user = nil
   end
 
@@ -41,7 +43,16 @@ module SessionsHelper
     user == current_user
   end
 
+  def current_shipper?
+    true if current_user&.shipper
+  end
+
+  def current_shipper
+    current_user.shipper
+  end
+
   def is_admin?
-    current_user&.admin?
+    return if current_user&.admin?
+    redirect_to root_path
   end
 end

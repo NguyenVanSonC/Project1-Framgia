@@ -1,6 +1,6 @@
 class Admin::BaseController < ApplicationController
   layout "admin"
-  # before_filter :is_admin?
+  before_action :is_admin?
 end
 
 class Admin::ProductsController < Admin::BaseController
@@ -12,6 +12,7 @@ class Admin::ProductsController < Admin::BaseController
 
   def new
     @product = Product.new
+    @category_childs = Category.where.not(child_of: nil)
   end
 
   def create
@@ -37,7 +38,7 @@ class Admin::ProductsController < Admin::BaseController
   end
 
   def destroy
-    @product.destroy
+    @product.update_attributes sale: 0
     flash[:success] = "Deleted"
     redirect_to admin_products_path
   end

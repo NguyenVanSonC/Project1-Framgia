@@ -1,0 +1,24 @@
+<% provide :title, t(".title") %>
+<% provide :button_text, t(".button") %>
+<section id="form">
+  <div class="container">
+    <div class="row">
+      <div class="signup-form">
+        <h2><%= t ".header" %></h2>
+        <%= form_for @shipper do |f| %>
+          <%= render "shared/error_messages", object: f.object %>
+          <%= f.label :company %>
+          <%= f.text_field :company, placeholder: t(".place_company") %>
+          <%= f.label :motobike_number %>
+          <%= f.text_field :motobike_number, placeholder: t(".place_moto_number") %>
+          <%= f.label :motobike_color %>
+          <%= f.text_field :motobike_color, placeholder: t(".place_moto_color") %>
+          <%= f.label :phone_number %>
+          <%= f.label :id_number %>
+          <%= f.text_field :id_number, placeholder: t(".place_id_number") %>
+          <%= f.submit t(".submit"), class: "submit_signup" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>

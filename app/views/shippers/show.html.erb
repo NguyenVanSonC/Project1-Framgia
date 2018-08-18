@@ -1,0 +1,30 @@
+<% provide :title, t(".title") %>
+<h4><%= t ".header" %></h4>
+<div class="container">
+  <div class="table-wrapper">
+    <div id="profile-shipper" class="col-sm-6">
+      <%= render partial: "shippers/profile_shipper" %>
+    </div>
+    <div id="chart-shipper" class="col-sm-6">
+      <%= pie_chart [[t(".shipping"), @order_shippers.shipping.count], [t(".shipped"), @order_shippers.shipped.count]] %>
+    </div>
+    <br>
+    <table class="table table-striped table-hover">
+      <thead>
+      <tr>
+        <th><%= t ".id" %></th>
+        <th><%= t ".unit_total" %></th>
+        <th><%= t ".sub_total" %></th>
+        <th><%= t ".address" %></th>
+        <th><%= t ".status" %></th>
+        <th><%= t ".date" %></th>
+        <th><%= t ".ship_cost" %></th>
+        <th><%= t ".action" %></th>
+      </tr>
+      </thead>
+      <tbody>
+        <%= render partial: "shippers/order_shipper", collection: @order_shippers, as: :order %>
+      </tbody>
+    </table>
+  </div>
+</div>

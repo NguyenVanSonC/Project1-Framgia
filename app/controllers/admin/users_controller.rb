@@ -1,6 +1,6 @@
 class Admin::BaseController < ApplicationController
   layout "admin"
-  # before_filter :is_admin?
+  before_action :is_admin?
 end
 
 class Admin::UsersController < Admin::BaseController

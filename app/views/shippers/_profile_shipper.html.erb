@@ -1,0 +1,8 @@
+<ul>
+  <li><%= t ".company" %><%= current_shipper.company %></li>
+  <li><%= t ".moto_number" %><%= current_shipper.motobike_number %></li>
+  <li><%= t ".moto_color" %><%= current_shipper.motobike_color %></li>
+  <li><%= t ".id_number" %><%= current_shipper.id_number %></li>
+  <li><%= t ".sub_salary" %><%= return_sum_ship_cost current_shipper.orders.shipped %><%= t ".dolar" %></li>
+  <li><%= t ".count_order" %><%= current_shipper.orders.shipped.count %><%= t ".shipped" %></li>
+</ul>

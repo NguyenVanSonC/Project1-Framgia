@@ -1,0 +1,23 @@
+<section id="cart_items">
+  <div class="container">
+    <div class="table-responsive cart_info">
+      <table class="table table-condensed">
+        <thead>
+        <tr class="cart_menu">
+          <td class="image"><%= t ".item" %></td>
+          <td class="description"><%= t ".description" %></td>
+          <td class="price"><%= t ".price" %></td>
+          <td class="quantity"><%= t ".quantity" %></td>
+          <td class="quantity"><%= t ".size" %></td>
+          <td class="total"><%= t ".total" %></td>
+          <td class="total"><%= t ".delete" %></td>
+        </tr>
+        </thead>
+        <tbody id="table-cart">
+          <%= render partial: "cart_table", collection: @products, as: :product %>
+        </tbody>
+      </table>
+    </div>
+    <%= link_to t(".checkout"), new_order_path, id: "check_out" %>
+  </div>
+</section>

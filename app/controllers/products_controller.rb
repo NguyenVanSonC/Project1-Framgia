@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   before_action :find_product, only: %i(show)
   before_action :load_comments, only: %i(show)
+  before_action :load_sizes, only: %i(show)
 
   def show
     @product = Product.find_by id: params[:id]
@@ -41,5 +42,9 @@ class ProductsController < ApplicationController
   def find_product
     @product = Product.find_by id: params[:id]
     valid_object? @product
+  end
+
+  def load_sizes
+    @sizes = Size.all
   end
 end

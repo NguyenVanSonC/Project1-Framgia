@@ -1,0 +1,47 @@
+<section id="cart_items">
+  <div class="container">
+    <div class="shopper-informations">
+      <div class="row">
+        <div class="col-sm-5 clearfix">
+          <div class="bill-to">
+            <p><%= t ".bill" %></p>
+            <div class="form-one">
+              <%= form_for @order do |f| %>
+                <%= render "shared/error_messages", object: f.object %>
+                <%= f.text_field :name, placeholder: t(".name"), class: "form-control" %>
+                <%= f.text_field :address, placeholder: t(".address"), class: "form-control" %>
+                <%= f.text_field :phone, placeholder: t(".phone"), class: "form-control" %>
+                <%= f.select :ship_id, Ship.all.collect { |p| [ p.name, p.id ] }, {include_blank: "Select something"} %>
+                <%= f.text_area :description, placeholder: t(".description") %>
+                <%= f.hidden_field :total, value: @sub_total %>
+                <%= f.submit t(".submit"), id: "done" %>
+              <% end %>
+            </div>
+            <div id="ship-cost">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="table-responsive cart_info">
+      <table class="table table-condensed">
+        <thead>
+        <tr class="cart_menu">
+          <td class="image"><%= t ".item" %></td>
+          <td class="description"><%= t ".description" %></td>
+          <td class="price"><%= t ".price" %></td>
+          <td class="quantity"><%= t ".quantity" %></td>
+          <td class="quantity"><%= t ".size" %></td>
+          <td class="total"><%= t ".total" %></td>
+        </tr>
+        </thead>
+        <tbody id="table-cart">
+          <%= render partial: "orders/item", collection: @products, as: :product %>
+        </tbody>
+      </table>
+    </div>
+    <div id="sub_total">
+      <%= t ".sub_total" %><%= @sub_total %>
+    </div>
+  </div>
+</section>

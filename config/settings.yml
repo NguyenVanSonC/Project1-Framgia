@@ -13,7 +13,11 @@ maximum_age: 150
 minimum_phone: 10
 maximum_phone: 15
 pageproduct: 14
-num_features_items: 6
+num_features_items: 15
 num_stars: 10
 maxcomment: 200
 pagecomment: 20
+quantity_default: 1
+size_default: 1
+sub_total: 0
+quantity_min: 0

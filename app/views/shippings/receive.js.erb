@@ -1,0 +1,2 @@
+$("#receive-<%= @order.id %>").html("<%= j render partial: "button_not_receive", locals: {order: @order} %>");
+$("#status-<%= @order.id %>").html("<%= j render partial: "shippers/status_order", locals: {order: @order} %>");

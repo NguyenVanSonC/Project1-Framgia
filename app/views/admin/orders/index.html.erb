@@ -1,0 +1,17 @@
+<div class="table-responsive table-responsive-data2">
+  <table class="table table-data2">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Price</th>
+      <th>Sub Price</th>
+      <th>address</th>
+      <th>status</th>
+      <th>Time</th>
+    </tr>
+    </thead>
+    <tbody>
+      <%= render partial: "admin/orders/order", collection: @orders, as: :order %>
+    </tbody>
+  </table>
+</div>

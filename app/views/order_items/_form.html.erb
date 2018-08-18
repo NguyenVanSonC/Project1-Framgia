@@ -1,0 +1,16 @@
+<%= form_for [@product, @order_item] do |f| %>
+  <div class="form-group col-md-6">
+    <%= f.select :size_id, Size.all.collect { |p| [ p.name, p.id ] }, {include_blank: t(".size")}, {:class => "form-control", id: "sell"} %>
+  </div>
+  <%= f.hidden_field :product_id, value: @product.id %>
+  <div class="form-group col-md-6">
+    <%= f.label :quantity %>
+    <%= f.number_field :quantity %>
+  </div>
+  <p class="col-md-12">
+    <%= button_tag class: "btn btn-fefault cart" do %>
+      <i class="fa fa-shopping-cart"></i>
+      <%= t ".add-cart" %>
+    <% end %>
+  </p>
+<% end %>

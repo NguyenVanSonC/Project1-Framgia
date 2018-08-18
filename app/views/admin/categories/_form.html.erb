@@ -2,7 +2,7 @@
   <%= f.label :name %>
   <%= f.text_field :name, class: "form-control" %>
   <br>
-  <%= f.collection_select :child_of, Category.all, :id, :name %>
+  <%= f.select :child_of, @category_parents.all.collect { |p| [ p.name, p.id ] }, {include_blank: "Select something"} %>
   <br>
   <%= f.label :description %>
   <%= f.text_area :description, class: "form-control" %>

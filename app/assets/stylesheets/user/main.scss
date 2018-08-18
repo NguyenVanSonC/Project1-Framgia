@@ -8,7 +8,6 @@ body {
   font-family: 'Roboto', sans-serif;
   /*background:;*/
   position: relative;
-  font-weight: 400px;
 }
 
 ul li {
@@ -240,7 +239,6 @@ a#scrollUp {
   outline: medium none;
   padding-left: 10px;
   width: 155px;
-  background-image: url(home/searchicon.png);
   background-repeat: no-repeat;
   background-position: 130px;
 }
@@ -850,7 +848,7 @@ h2.title {
     text-align: center;
     width: 100%;
   }
-  .add-to-cart {
+  .add-to-cartform-one {
     background: #fff;
     border: 0 none;
     border-radius: 0;
@@ -1465,7 +1463,7 @@ h2.title {
 
 #cart_items .cart_info {
   border: 1px solid #E6E4DF;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   .cart_menu {
     background: #FE980F;
     color: #fff;
@@ -1512,10 +1510,12 @@ h2.title {
   .cart_price p {
     color: #696763;
     font-size: 18px;
+    margin-top: 30px;
   }
   .cart_total_price {
     color: #FE980F;
     font-size: 24px;
+    margin-top: 30px;
   }
 }
 
@@ -1542,19 +1542,22 @@ h2.title {
   font-size: 16px;
   text-align: center;
   font-family: 'Roboto',sans-serif;
+  background-color: #B2B2B2;
+  padding: 7px 10px;
+  border-radius: 7px;
 }
 
 .cart_delete {
-  display: block;
-  margin-right: -12px;
+  margin-right: -6px;
   overflow: hidden;
   a {
-    background: #F0F0E9;
+    background: #B2B2B2;
     color: #FFFFFF;
     padding: 5px 7px;
     font-size: 16px;
     &:hover {
       background: #FE980F;
+      color: white;
     }
   }
 }
@@ -1794,12 +1797,12 @@ select, textarea {
   }
 }
 
-.form-one > form > input {
+.form-one > form > input, select, textarea {
   background: #F0F0E9;
   border: 0 none;
   margin-bottom: 10px;
   padding: 10px;
-  width: 100%;
+  width: 300px;
   font-weight: 300;
 }
 
@@ -1815,7 +1818,7 @@ select, textarea {
     font-size: 12px;
     height: 335px;
     margin-bottom: 20px;
-    padding: 15px 20px;
+    padding: 15px 200px;
   }
   label {
     font-weight: 300;
@@ -2008,7 +2011,6 @@ select, textarea {
 
 .rating-area {
   border: 1px solid #F7F7F0;
-  direction: block;
   overflow: hidden;
   ul li {
     float: left;

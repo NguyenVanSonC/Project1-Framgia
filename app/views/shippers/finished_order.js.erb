@@ -1,0 +1,3 @@
+$("#finished-<%= @order.id %>").remove();
+$("#status-<%= @order.id %>").html("<%= j render partial: "shippers/status_order", locals: {order: @order} %>");
+$("#profile-shipper").html("<%= j render partial: "shippers/profile_shipper" %>");

@@ -32,11 +32,26 @@
 en:
   hello: "Hello world"
   create_user: "Account create success"
+  create_shipper: "Account Shipper create success"
   not_found: "Not Found This User!"
   update: "Update Successful!"
   waring_login: "Invalid email/password combination"
   success_login: "Welcome ,Shopping Fun!"
   login: "Please Login Your Account"
+  out_of_stock: "Out Of Stock"
+  create_order: "Order create success"
+  destroy: "Delete Successful!"
+  notdestroy: "Delete Fails!"
+  order_shipping: "Your Order : Shipping , You Can Not Delete !"
+  not_receive: "Not Receive Order"
+  receive: "Receive"
+  cart_empty: "Your Cart Empty, please shopping! Hehe"
+  shouldbe: "should be less than 5MB"
+  order_notification: "Order Confirmation : "
+  hi: "Hi, Good to see you"
+  thanhks: "Thank You for shopping with E-commerce.com"
+  your_order: "You Order : "
+  dolar: "$"
   static_pages:
     home:
       title: "Home"
@@ -74,6 +89,8 @@ en:
       blog: "Blog"
       blog-list: "Blog List"
       Blog Single: "Blog Single"
+      order: "Your Order"
+      time_line: "Time Line"
     slider:
       name-shop: "E-COMMERCE"
       get-it: "Get it now"
@@ -137,6 +154,9 @@ en:
       gender: "Gender: "
       phone: "Phone: "
       contact: "Contact"
+      shipper: "Do You Want To Be Ours Shipper ?"
+      register: "Register"
+      show_order: "Your List Orders "
     edit:
       title: "Edit User"
       save: "Update"
@@ -147,6 +167,8 @@ en:
       error: "error"
     search:
       search: "Search"
+    count_cart:
+      cart: "Cart"
   sessions:
     new:
       title: "Login"
@@ -175,3 +197,149 @@ en:
   following:
     index:
       wishlist: "Wishlist"
+  carts:
+    form:
+      add-cart: "Add to cart"
+      quantity: "Quantity"
+      size: "Size"
+    index:
+      item: "Item"
+      description: "Description"
+      price: "Price"
+      quantity: "Quantity"
+      size: "Size"
+      total: "Total"
+      checkout: "Check out"
+    cart_table:
+      delete: "Delete"
+      sure: "Are you sure?"
+      decrease: "-"
+      increase: "+"
+      id: "Web ID:"
+      $: "$"
+  orders:
+    new:
+      item: "Item"
+      description: "Description"
+      price: "Price"
+      quantity: "Quantity"
+      size: "Size"
+      total: "Total"
+      sub_total: "Sub Total : $ "
+      name: "Name"
+      phone: "Phone"
+      address: "Address"
+      submit: "Submit"
+      bill: "Bill To"
+    item:
+      id: "Web ID:"
+      $: "$"
+    order:
+      delete: "Delete"
+      sure: "Are you sure?"
+      show: "Show"
+      show_shipper: "Shipper"
+    show_shipper:
+      user_profile: "Shipper Profile"
+      email: "Email: "
+      age: "Age: "
+      birthday: "BirthDay: "
+      gender: "Gender: "
+      phone: "Phone: "
+      contact: "Contact"
+      company: "Company : "
+      moto_color: "MotoBike Color : "
+      moto_number: "MotoBike Number : "
+      id_number: "ID Number : "
+    index:
+      header: "Your History Order"
+      title: "Hitory Order"
+      id: "ID"
+      unit_total: "Unit Total"
+      sub_total: "Sub Total"
+      address: "Order Address"
+      status: "Status"
+      date: "Order Date"
+      show: "Show"
+      delete: "Delete"
+    show:
+      id: "ID"
+      name: "Name Product"
+      unit_total: "Unit Total"
+      sub_total: "Sub Total"
+      quantity: "Quantity"
+      header: "Order Items"
+      title: "Your Order Items"
+  shippers:
+    new:
+      place_company: "Your Company Name"
+      place_moto_number: "Your Moto Bike Number"
+      place_moto_color: "Your Moto Bike Color"
+      place_id_number: "Your ID Number"
+      submit: "Register"
+      header: "Shipper Account"
+      title: "Create Account Shipper"
+    order_shipper:
+      finished: "Finished"
+    show:
+      header: "History Shipping Order"
+      title: "Your Shipping Order"
+      id: "ID"
+      unit_total: "Unit Total"
+      sub_total: "Sub Total"
+      address: "Order Address"
+      status: "Status"
+      date: "Order Date"
+      ship_cost: "Ship Cost"
+      action: "Action"
+      shipping: "Shipping"
+      shipped: "Shipped"
+    profile_shipper:
+      company: "Company : "
+      moto_color: "MotoBike Color : "
+      moto_number: "MotoBike Number : "
+      id_number: "ID Number : "
+      sub_salary: "Your Sub Salary : "
+      dolar: " $"
+      count_order: "Your Sub Orders: "
+      shipped: " (Shipped)"
+  shippings:
+    index:
+      header: "Time Line Orders"
+      title: "Time Line"
+      id: "ID"
+      unit_total: "Unit Total"
+      sub_total: "Sub Total"
+      address: "Order Address"
+      status: "Status"
+      date: "Order Date"
+      action: "Action"
+      show: "Show"
+    button_receive:
+      receive: "Receive"
+    button_not_receive:
+      not_receive: "Not Receive"
+      sure: "Are you sure?"
+    order_items:
+      show: "Show"
+  admin:
+    orders:
+      show:
+        id: "ID"
+        name: "Name Product"
+        unit_total: "Unit Total"
+        sub_total: "Sub Total"
+        quantity: "Quantity"
+        header: "Order Items"
+        title: "Your Order Items"
+      index:
+        index:
+          header: "History Order"
+          title: "Hitory Order"
+          id: "ID"
+          unit_total: "Unit Total"
+          sub_total: "Sub Total"
+          address: "Order Address"
+          status: "Status"
+          date: "Order Date"
+          show: "Show"

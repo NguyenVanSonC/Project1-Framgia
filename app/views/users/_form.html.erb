@@ -23,5 +23,6 @@
   <%= f.password_field :password, placeholder: t(".place_password") %>
   <%= f.label :password_confirmation %>
   <%= f.password_field :password_confirmation, placeholder: t(".place_pass") %>
+  <%= f.file_field :avatar %>
   <%= f.submit yield(:button_text), class: "submit_signup" %>
 <% end %>

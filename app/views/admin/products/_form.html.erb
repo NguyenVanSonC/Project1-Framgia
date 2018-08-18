@@ -1,13 +1,14 @@
 <%= form_for [:admin, @product] do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name, class: "form-control" %>
-
+  <%= f.label :image %>
+  <%= f.text_field :image, class: "form-control" %>
   <%= f.label :price %>
   <%= f.number_field :cost, class: "form-control" %>
   <br>
   <br>
   <%= f.label :category %>
-  <%= f.collection_select :category_id, Category.all, :id, :name, class:"form-control" %>
+  <%= f.select :category_id, @category_childs.all.collect { |p| [ p.name, p.id ] }, {include_blank: "Select something"} %>
   <br><br>
   <%= f.submit "Submit", class: "btn btn-primary" %>
 <% end %>

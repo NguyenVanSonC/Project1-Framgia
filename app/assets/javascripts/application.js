@@ -20,4 +20,6 @@
 //= require bootstrap
 //= require bootstrap.min
 //= require bootstrap-sprockets
+//= require Chart.bundle
+//= require chartkick
 //= require_tree .

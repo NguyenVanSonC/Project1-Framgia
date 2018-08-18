@@ -6,9 +6,10 @@ class User < ApplicationRecord
   ratyrate_rater
   attr_accessor :remember_token
   has_many :comments, dependent: :destroy
-
   enum typeUser: {admin: 1, user: 2, shipper: 3}
-
+  has_many :orders, dependent: :destroy
+  has_one :shipper
+  mount_uploader :avatar, PictureUploader
   before_save :downcase_email
   validates :name, presence: true, length: {maximum: Settings.maxname}
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -63,9 +64,20 @@ class User < ApplicationRecord
   def following? product
     following_product.include? product
   end
+  
+  def send_notifiaction_order
+    UserMailer.order_notification(self).deliver_now
+  end
+
   private
 
   def downcase_email
     self.email = email.downcase
+  end
+
+  def avatar_size
+    if avatar.size > (Settings.picturesize).megabytes
+      errors.add :avatar, t("shouldbe")
+    end
   end
 end

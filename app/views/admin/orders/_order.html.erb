@@ -1,0 +1,12 @@
+<tr class="tr-shadow">
+  <td><%= order.id %></td>
+  <td><%= order.total %></td>
+  <td><%= order.subtotal %></td>
+  <td><%= order.address %></td>
+  <td><%= order.status %></td>
+  <td><%= order.created_at %></td>
+  <td><%= link_to t(".show"), admin_order_path(order), class: "btn btn-danger", id: "show_order" %></td>
+  <% unless order.processing? %>
+    <td><%= link_to t(".show_shipper"), show_shipper_path(id: order.id), class: "btn btn-danger", id: "show_order" %></td>
+  <% end %>
+</tr>

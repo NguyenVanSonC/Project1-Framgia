@@ -1,0 +1,10 @@
+<%= form_tag url_for(controller: "carts",
+   action: "add_cart"), method: :get do %>
+  <div class="form-group col-md-6">
+    <%= select_tag "size_id", options_for_select(@sizes.collect{ |u| [u.name, u.id] }), {include_blank: t(".size")} %>
+  </div>
+  <%= hidden_field_tag :product_id, @product.id.to_param %>
+  <%= label_tag :quantity %>
+  <%= number_field_tag :quantity, nil %>
+  <button type="submit" class="btn btn-fefault cart"><i class="fa fa-shopping-cart"></i><%= t ".add-cart" %></button>
+<% end %>

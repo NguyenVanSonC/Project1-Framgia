@@ -10,6 +10,16 @@
         <div class="col-sm-8">
           <div class="shop-menu pull-right">
             <ul class="nav navbar-nav">
+              <li><%= link_to t(".signup"), signup_path %></li>
+              <li>
+                <%= link_to new_order_path do %>
+                  <i class="fa fa-lock"></i>
+                  <%= t ".checkout" %>
+                <% end %>
+              </li>
+              <li class="count-cart">
+                <%= render "shared/count_cart" %>
+              </li>
               <% if logged_in? %>
                 <li>
                   <%= link_to following_path do %>
@@ -17,12 +27,7 @@
                     <%= t ".wishlist" %>
                   <% end %>
                 </li>
-              <% else %>
-                <li><%= link_to t(".signup"), signup_path %></li>
-              <% end %>
-              <li><a href="checkout.html"><i class="fa fa-crosshairs"></i><%= t ".checkout" %></a></li>
-              <li><a href="cart.html"><i class="fa fa-shopping-cart"></i><%= t ".cart" %></a></li>
-              <% if logged_in? %>
+                <li><%= link_to t(".order"), orders_path %></li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                     <%= t ".account" %><i class="fa fa-angle-down"></i>
@@ -66,6 +71,9 @@
                   <li><a href="blog-single.html"><%= t ".blog-single" %></a></li>
                 </ul>
               </li>
+              <% if current_shipper? %>
+                <li><%= link_to t(".time_line"), timeline_orders_path %></li>
+              <% end %>
             </ul>
           </div>
         </div>

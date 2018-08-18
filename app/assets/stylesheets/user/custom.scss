@@ -77,8 +77,9 @@
 }
 #range-price {
   input {
-    background-color: $white-light;
-    color: $gray;
+    background-color: $gray;
+    opacity: 0.5;
+    color: $black;
     width: 150px;
     height: 40px;
     margin-bottom: 10px;
@@ -96,10 +97,6 @@
       background-color: $organ;
     }
   }
-}
-
-#time-comment {
-  font-size: 15px;
 }
 
 #wish_box {
@@ -120,4 +117,107 @@
 .h3-follow-o {
   float: right;
   color: $organ;
+}
+#time-comment {
+  font-size: 15px;
+}
+#order-item {
+  margin-top: 70px;
+  margin-right: 100px;
+  input {
+    border-radius: 4px;
+    width: 70px;
+  }
+  button {
+    margin-right: 140px;
+  }
+  select {
+    border-radius: 4px;
+    width: 150px;
+    height: 35px;
+  }
+  label {
+    margin-left: 20px;
+  }
+}
+.cart_product {
+  height: 150px;
+  width: 150px;
+}
+#check_out {
+  margin-left: 1050px;
+  margin-bottom: 50px;
+  background-color: $organ;
+  color: $white-light;
+  padding: 8px 12px;
+  border-radius: 5px;
+  text-align: center;
+  &:hover {
+    background-color: $gray;
+  }
+}
+#sub_total {
+  font-size: xx-large;
+  color: $organ;
+}
+#done {
+  margin-bottom: 50px;
+  margin-top: 20px;
+  background-color: $organ;
+  color: $white-light;
+  padding: 8px 12px;
+  border-radius: 5px;
+  text-align: center;
+  &:hover {
+    background-color: $gray;
+  }
+}
+#button_order {
+  background-color: $crimson;
+  color: white;
+  &:hover {
+    background-color: $organ;
+  }
+}
+#show_order {
+  background-color: $blue-light;
+  color: white;
+  &:hover {
+    background-color: $pink;
+  }
+}
+#shipper_register {
+  background-color: $blue-light;
+  color: white;
+  border: none;
+  width: 200px;
+  margin-bottom: 30px;
+  &:hover {
+    background-color: $pink;
+  }
+}
+#profile-shipper {
+  border: none;
+  padding: 20px 30px;
+  width: 400px;
+  border-radius: 7px;
+  margin-bottom: 30px;
+  background-color: $gray;
+  font-size: larger;
+  align-items: center;
+  margin-top: 50px;
+}
+#chart-shipper {
+  margin-bottom: 100px;
+}
+#ship-cost {
+  margin-left: 400px;
+  margin-top: 150px;
+  width: 270px;
+  height: 50px;
+  padding: 15px 30px;
+  border-radius: 10px;
+  color: white;
+  font-size: larger;
+  align-items: center;
 }

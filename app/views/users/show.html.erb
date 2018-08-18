@@ -2,7 +2,7 @@
 <% provide :title, @user.name %>
 <h2 class="h2-user"><%= t ".user_profile" %></h2>
 <div class="card">
-  <%= image_tag("home/team2.jpg") %>
+  <%= image_tag @user.avatar.url if @user.avatar? %>
   <h1><%= @user.name %></h1>
   <p class="title"><% @user.address %></p>
   <p><%= t ".email" %><%= @user.email %></p>
@@ -16,6 +16,11 @@
     <a href="#"><i class="fa fa-linkedin"></i></a>
     <a href="#"><i class="fa fa-facebook"></i></a>
   </div>
-  <p><button><%= t ".contact" %></button></p>
+  <% if current_shipper %>
+    <p><%= link_to t(".show_order"), shipper_path(current_shipper), class: "btn btn-danger", id: "shipper_register" %></p>
+  <% else %>
+    <p><%= t ".shipper" %></p>
+    <p><%= link_to t(".register"), new_shipper_path, class: "btn btn-danger", id: "shipper_register" %></p>
+  <% end %>
 </div>
 <% end %>
