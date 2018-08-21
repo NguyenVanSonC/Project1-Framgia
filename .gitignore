@@ -27,10 +27,10 @@
 .byebug_history
 
 # Ignore master key for decrypting credentials and more.
-/config/master.key
 .idea/
 config/settings.local.yml
 config/settings/*.local.yml
 config/environments/*.local.yml
 config/*.yml
 config/credentials.yml.enc
+public/
