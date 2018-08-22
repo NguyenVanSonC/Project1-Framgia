@@ -1,0 +1,56 @@
+<div class="product-details">
+  <div class="col-sm-5">
+    <div class="view-product">
+      <%= image_tag @product.image %>
+      <h3><%= t ".zoom" %></h3>
+    </div>
+    <div id="similar-product" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="item active">
+          <a href=""><%= image_tag "product-details/similar1.jpg" %></a>
+          <a href=""><%= image_tag "product-details/similar2.jpg" %></a>
+          <a href=""><%= image_tag "product-details/similar3.jpg" %></a>
+        </div>
+        <div class="item">
+          <a href=""><%= image_tag "product-details/similar1.jpg" %></a>
+          <a href=""><%= image_tag "product-details/similar2.jpg" %></a>
+          <a href=""><%= image_tag "product-details/similar3.jpg" %></a>
+        </div>
+        <div class="item">
+          <a href=""><%= image_tag "product-details/similar1.jpg" %></a>
+          <a href=""><%= image_tag "product-details/similar2.jpg" %></a>
+          <a href=""><%= image_tag "product-details/similar3.jpg" %></a>
+        </div>
+      </div>
+      <a class="left item-control" href="#similar-product" data-slide="prev">
+      <i class="fa fa-angle-left"></i>
+      </a>
+      <a class="right item-control" href="#similar-product" data-slide="next">
+      <i class="fa fa-angle-right"></i>
+      </a>
+    </div>
+  </div>
+  <div class="col-sm-7">
+    <div class="product-information">
+      <%= image_tag "product-details/new.jpg", class: "newarrival" %>
+      <h2><%= @product.name %></h2>
+      <%= image_tag "product-details/rating.png" %>
+      <span>
+        <span>
+          <%= t ".usd" %>
+          <%= @product.cost %>
+        </span>
+        <label><%= t ".quantity" %></label>
+        <input type="text" value="" />
+        <button type="button" class="btn btn-fefault cart">
+          <i class="fa fa-shopping-cart"></i>
+          <%= t ".add-cart" %>
+        </button>
+      </span>
+      <p><b><%= t ".available" %></b></p>
+      <p><b><%= t ".condition" %></b></p>
+      <p><b><%= t ".brand" %></b></p>
+    </div>
+  </div>
+</div>
+</div>

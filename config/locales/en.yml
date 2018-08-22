@@ -35,6 +35,7 @@ en:
     home:
       title: "Home"
       features: "Features Items"
+    sidebar:
       price: "Price Range"
       category: "Category"
   layouts:
@@ -68,3 +69,18 @@ en:
       time: "24 DEC 2014"
       map: "505 S Atlantic Ave Virginia Beach, VA(Virginia)"
       copy: "Copyright © 2013 E-Commerce Inc. All rights reserved."
+  products:
+    products:
+      product_not_found: "Product not found"
+      add-cart: "Add to cart"
+      add-wishlist: "Add to wishlist"
+      add-compare: "Add to compare"
+      usd: "$"
+    product-detail:
+      zoom: "ZOOM"
+      quantity: "Quantity:"
+      add-cart: "Add to cart"
+      usd: "$"
+      available: "Availability:"
+      condition: "Condition:"
+      brand: "Brand:"
