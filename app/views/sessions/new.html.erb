@@ -1,0 +1,24 @@
+<% provide :title, t(".title") %>
+<section id="form">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4 col-sm-offset-1">
+        <div class="login-form">
+          <h2><%= t ".login" %></h2>
+          <%= form_for(:session, url: login_path) do |f| %>
+            <%= f.label :email %>
+            <%= f.email_field :email %>
+            <%= f.label :password %>
+            <%= f.password_field :password %>
+            <span>
+              <%= f.check_box :remember_me %>
+              <%= t ".remember" %>
+            </span>
+            <%= f.submit t(".submit"), class: "button_login" %>
+          <% end %>
+          <p> <%= t ".sigup" %> <%= link_to t(".sigup_path"), signup_path %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
