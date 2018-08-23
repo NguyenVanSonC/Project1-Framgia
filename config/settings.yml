@@ -13,3 +13,5 @@ maximum_age: 150
 minimum_phone: 10
 maximum_phone: 15
 pageproduct: 14
+num_features_items: 6
+num_stars: 10

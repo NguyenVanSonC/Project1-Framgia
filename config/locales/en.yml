@@ -43,7 +43,7 @@ en:
       features: "Features Items"
       price: "Price Range"
       category: "Category"
-    sidebar:  
+    sidebar:
       wishlist: "Wishlist"
       checkout: "Checkout"
       cart: "Cart"
@@ -84,6 +84,7 @@ en:
       usd: "$"
     product-detail:
       zoom: "ZOOM"
+      votes: "votes"
       quantity: "Quantity:"
       add-cart: "Add to cart"
       usd: "$"
