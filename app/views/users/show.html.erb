@@ -1,0 +1,21 @@
+<% if @user %>
+<% provide :title, @user.name %>
+<h2 class="h2-user"><%= t ".user_profile" %></h2>
+<div class="card">
+  <%= image_tag("home/team2.jpg") %>
+  <h1><%= @user.name %></h1>
+  <p class="title"><% @user.address %></p>
+  <p><%= t ".email" %><%= @user.email %></p>
+  <p><%= t ".age" %><%= @user.age %></p>
+  <p><%= t ".birthday" %><%= @user.birthday %></p>
+  <p><%= t ".phone" %><%= @user.phone_number %></p>
+  <p><%= t ".gender" %><%= @user.gender %></p>
+  <div>
+    <a href="#"><i class="fa fa-dribbble"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    <a href="#"><i class="fa fa-facebook"></i></a>
+  </div>
+  <p><button><%= t ".contact" %></button></p>
+</div>
+<% end %>

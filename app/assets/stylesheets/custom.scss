@@ -1,0 +1,22 @@
+.container_radio {
+  height: 100px;
+  position: relative;
+  p {
+    margin-top: 20px;
+  }
+  #radio_button_one {
+    position: absolute;
+    left: -200px;
+    top: 0px;
+    height: 20px;
+  }
+  #radio_button_two {
+    position: absolute;
+    left: -200px;
+    bottom: 30px;
+    height: 20px;
+  }
+}
+.h2-user {
+  text-align: center;
+}
