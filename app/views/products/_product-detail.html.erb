@@ -34,7 +34,13 @@
     <div class="product-information">
       <%= image_tag "product-details/new.jpg", class: "newarrival" %>
       <h2><%= @product.name %></h2>
-      <%= image_tag "product-details/rating.png" %>
+      <p>
+        <b>
+          <%= rating_for @product, :quality, disable_after_rate: true, cancel: false, star: Settings.num_stars %>
+          <%= @product.rates("quality").count %>
+        </b>
+        <%= t ".votes" %>
+      </p>
       <span>
         <span>
           <%= t ".usd" %>
