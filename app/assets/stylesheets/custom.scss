@@ -67,3 +67,33 @@
     }
   }
 }
+.submit-search{
+  border-radius: 7px;
+  background: $white-light;
+  padding: 5px 10px;
+  i {
+    color: $gray;
+  }
+}
+#range-price {
+  input {
+    background-color: $white-light;
+    color: $gray;
+    width: 150px;
+    height: 40px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+  }
+  a {
+    background-color: $gray;
+    color: $white-light;
+    padding: 8px;
+    border-radius: 5px;
+    text-align: center;
+    &:hover {
+      background-color: $organ;
+    }
+  }
+}
