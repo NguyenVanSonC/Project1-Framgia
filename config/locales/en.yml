@@ -43,6 +43,18 @@ en:
       features: "Features Items"
       price: "Price Range"
       category: "Category"
+    sidebar:  
+      wishlist: "Wishlist"
+      checkout: "Checkout"
+      cart: "Cart"
+      shop: "Shop"
+      products: "Products"
+      products-details: "Product Details"
+      blog: "Blog"
+      blog-list: "Blog List"
+      Blog Single: "Blog Single"
+      price: "Price Range"
+      category: "Category"
     sidebar:
       wishlist: "Wishlist"
       checkout: "Checkout"
@@ -75,6 +87,11 @@ en:
       time: "24 DEC 2014"
       map: "505 S Atlantic Ave Virginia Beach, VA(Virginia)"
       copy: "Copyright © 2013 E-Commerce Inc. All rights reserved."
+    filter_products:
+      min: "Min"
+      max: "Max"
+    filter_alphabet:
+      filter: "AlPhabet"
   products:
     products:
       product_not_found: "Product not found"
@@ -82,6 +99,7 @@ en:
       add-wishlist: "Add to wishlist"
       add-compare: "Add to compare"
       usd: "$"
+      seemore: "Show Product"
     product-detail:
       zoom: "ZOOM"
       votes: "votes"

@@ -2,10 +2,14 @@
   <div class="left-sidebar">
     <h2><%= t ".category" %></h2>
     <div class="panel-group category-products" id="accordian">
+      <%= render partial: "categories/category", collection: @categories, as: :category %>
     </div>
     <div class="price-range">
       <h2><%= t ".price" %></h2>
       <div class="well text-center" id="range-price">
+        <%= render "layouts/filter_products" %>
+        <br>
+        <%= render "layouts/filter_alphabet" %>
       </div>
     </div>
     <div class="shipping text-center">

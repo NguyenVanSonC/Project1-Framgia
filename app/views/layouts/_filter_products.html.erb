@@ -1,0 +1,7 @@
+<%= form_tag url_for(controller: "products",
+  action: "filter_products"), method: :get, remote: true do %>
+  <%= number_field_tag :cost_min, nil, placeholder: t(".min") %>
+  <%= number_field_tag :cost_max, nil, placeholder: t(".max") %>
+  <br>
+  <button type="submit" class="submit-search"><i class="fa fa-search"></i></button>
+<% end %>

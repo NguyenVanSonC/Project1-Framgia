@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   post "/products/rate", to: "rater#create", as: "rate"
   resources :users
   resources :products, only: %i(show)
+  get "filter_items", to: "products#filter_products", as: "filter_items"
 end
