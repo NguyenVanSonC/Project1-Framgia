@@ -1,0 +1,15 @@
+<% if current_user.following? prd %>
+  <%= form_for @following, url: {action: :destroy, controller: :following, id: prd}, method: :delete, remote: true do |f| %>
+    <button type="submit" class="btn add-to-wish">
+      <h3 class="h3-follow"><i class="fa fa-heart"></i></h3>
+    </button>
+  <% end %>
+<% else %>
+  <%= form_for current_user.followings.build(followed_id: prd.id), url: following_path, remote: true do |f| %>
+    <%= f.hidden_field :follower_id %>
+    <%= f.hidden_field :followed_id, value: prd.id %>
+    <button type="submit" class="btn add-to-wish">
+      <h3 class="h3-follow"><i class="fa fa-heart-o"></i></h3>
+    </button>
+  <% end %>
+<% end %>

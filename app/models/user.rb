@@ -1,4 +1,8 @@
 class User < ApplicationRecord
+  has_many :followings, class_name: Following.name,
+    foreign_key: "follower_id",
+    dependent: :destroy
+  has_many :following_product, through: :followings, source: :followed
   ratyrate_rater
   attr_accessor :remember_token
   has_many :comments, dependent: :destroy
@@ -49,6 +53,9 @@ class User < ApplicationRecord
     BCrypt::Password.new(digest).is_password? token
   end
 
+  def following? product
+    following_product.include? product
+  end
   private
 
   def downcase_email

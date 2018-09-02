@@ -10,15 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_23_100447) do
-  create_table "categories", force: :cascade do |t|
-    t.string "name"
-    t.string "description"
-    t.string "img_url"
-    t.integer "child_of"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 2018_09_05_020734) do
 
   create_table "average_caches", force: :cascade do |t|
     t.integer "rater_id"
@@ -31,6 +23,36 @@ ActiveRecord::Schema.define(version: 2018_08_23_100447) do
     t.index ["rater_id"], name: "index_average_caches_on_rater_id"
   end
 
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.string "img_url"
+    t.integer "child_of"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.text "content"
+    t.integer "user_id"
+    t.integer "product_id"
+    t.integer "reply_to"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_comments_on_product_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
+  create_table "followings", force: :cascade do |t|
+    t.integer "follower_id"
+    t.integer "followed_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["followed_id"], name: "index_followings_on_followed_id"
+    t.index ["follower_id", "followed_id"], name: "index_followings_on_follower_id_and_followed_id", unique: true
+    t.index ["follower_id"], name: "index_followings_on_follower_id"
+  end
+
   create_table "overall_averages", force: :cascade do |t|
     t.string "rateable_type"
     t.integer "rateable_id"
@@ -38,6 +60,18 @@ ActiveRecord::Schema.define(version: 2018_08_23_100447) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["rateable_type", "rateable_id"], name: "index_overall_averages_on_rateable_type_and_rateable_id"
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string "name"
+    t.decimal "cost"
+    t.boolean "status"
+    t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "rating"
+    t.integer "category_id"
+    t.index ["category_id"], name: "index_products_on_category_id"
   end
 
   create_table "rates", force: :cascade do |t|
@@ -65,30 +99,6 @@ ActiveRecord::Schema.define(version: 2018_08_23_100447) do
     t.index ["cacheable_type", "cacheable_id"], name: "index_rating_caches_on_cacheable_type_and_cacheable_id"
   end
 
-  create_table "comments", force: :cascade do |t|
-    t.text "content"
-    t.integer "user_id"
-    t.integer "product_id"
-    t.integer "reply_to"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["product_id"], name: "index_comments_on_product_id"
-    t.index ["user_id"], name: "index_comments_on_user_id"
-  end
-
-
-  create_table "products", force: :cascade do |t|
-    t.string "name"
-    t.decimal "cost"
-    t.boolean "status"
-    t.string "image"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "category_id"
-    t.integer "rating"
-    t.index ["category_id"], name: "index_products_on_category_id"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "address"
@@ -101,5 +111,9 @@ ActiveRecord::Schema.define(version: 2018_08_23_100447) do
     t.string "remember_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "Category_id"
+    t.integer "type"
+    t.index ["Category_id"], name: "index_users_on_Category_id"
   end
+
 end

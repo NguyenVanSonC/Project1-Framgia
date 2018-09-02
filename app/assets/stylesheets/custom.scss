@@ -97,6 +97,27 @@
     }
   }
 }
+
 #time-comment {
   font-size: 15px;
+}
+
+#wish_box {
+  position: absolute;
+  top: 30px;
+  right: 100px;
+}
+
+.h3-follow {
+  float: right;
+  color: $organ;
+}
+
+.h3-follow:hover {
+  color: $organ;
+}
+
+.h3-follow-o {
+  float: right;
+  color: $organ;
 }

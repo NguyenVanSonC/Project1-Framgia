@@ -32,6 +32,11 @@
   </div>
   <div class="col-sm-7">
     <div class="product-information">
+      <% if logged_in? %>
+        <div id="wish_box">
+          <%= render "following/following-button", prd: @product %>
+        </div>
+      <% end %>
       <%= image_tag "product-details/new.jpg", class: "newarrival" %>
       <h2><%= @product.name %></h2>
       <p>
