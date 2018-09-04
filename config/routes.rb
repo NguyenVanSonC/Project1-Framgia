@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+  get "search_products/index"
   root "static_pages#home"
+  resources :products, only: %i(show)
   get "/signup", to: "users#new"
   post "/signup", to: "users#create"
   get "/login", to: "sessions#new"
@@ -7,6 +9,9 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy"
   post "/products/rate", to: "rater#create", as: "rate"
   resources :users
-  resources :products, only: %i(show)
   get "filter_items", to: "products#filter_products", as: "filter_items"
+  resources :comments
+  resources :products, only: %i(show) do
+    resources :comments
+  end
 end

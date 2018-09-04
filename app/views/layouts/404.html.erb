@@ -1,0 +1,11 @@
+<div class="container text-center">
+  <div class="logo-404">
+    <%= link_to image_tag(image_path("home/logo.png")), root_path %>
+  </div>
+  <div class="content-404">
+    <%= image_tag(image_path("404/404.png"), class: "img-responsive") %>
+    <h1><b><%= t(".opp") %></b> <%= t(".couldfind") %></h1>
+    <p><%= t(".message") %></p>
+    <%= link_to t(".bring"), root_path %>
+  </div>
+</div>

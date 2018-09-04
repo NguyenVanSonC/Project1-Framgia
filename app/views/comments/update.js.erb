@@ -1,0 +1,3 @@
+$('#comment-<%= @comment.id %>').html('<%= j render @comment %>');
+$('#comment-<%= @comment.id %>').html('<%= j render partial: "comments/sub_comments", \
+ locals: {comment: @comment} %>');

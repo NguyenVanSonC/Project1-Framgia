@@ -1,0 +1,10 @@
+<%= form_for [@product, @comment], :html => {:class => "contact-form row soft-input"}, remote: true do |f| %>
+  <p class="col-md-12">
+    <%= f.text_area :content, class: "form-control", id: "content-area", placeholder: "Content" %>
+  </p>
+  <%= f.hidden_field :reply_to, value: @reply_to %>
+  <%= f.hidden_field :product_id, value: @product.id %>
+  <p class="col-md-12">
+    <%= f.submit t(".submit"), class: "button-md uppercase to-right hover-dark-blue blue text-white hover-text-white" %>
+  </p>
+<% end %>

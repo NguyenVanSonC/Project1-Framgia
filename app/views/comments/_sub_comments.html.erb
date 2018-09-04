@@ -1,0 +1,24 @@
+<li>
+  <div class="comment-post" id="comment-<%= comment.id %>">
+    <figure>
+      <%= link_to image_tag(image_path("product-details/128.jpg")), comment.user %>
+    </figure>
+    <div class="comment-content">
+      <h5>
+        <%= link_to comment.user_name, comment.user %>
+        <%= t ".say" %>
+        <% if logged_in? && current_user?(comment.user) %>
+          <%= link_to t(".edit"), edit_product_comment_path(comment.product, comment, comment_id: comment.reply_to), remote: true, class: "btn btn-info btn-circle text-uppercase" %>
+          <%= link_to t(".delete"), comment, method: :delete, data: { confirm: t(".sure") }, remote: true, class: "btn btn-info btn-circle text-uppercase"  %>
+        <% end %>
+      </h5>
+      <p id="time-comment">
+        <%= comment.created_at %>
+      </p>
+      <p>
+        <%= comment.content %>
+      </p>
+    </div>
+    <div id="reply-form-<%= comment.id %>"></div>
+  </div>
+</li>
