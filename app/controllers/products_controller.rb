@@ -4,18 +4,18 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find_by id: params[:id]
+    @following = Following.find_by_followed_id @product.id
     return if @product
     flash[:danger] = t "products.product_not_found"
     redirect_to root_path
   end
 
   def filter_products
-    case
-    when params[:cate_id]
+    if params[:cate_id]
       @products = Product.by_category params[:cate_id]
-    when params[:alphabet]
+    elsif params[:alphabet]
       @products = Product.by_alphabet
-    when params[:cost_min].present? || params[:cost_max].present?
+    elsif params[:cost_min].present? || params[:cost_max].present?
       @products = check_price params[:cost_min], params[:cost_max]
     end
   end

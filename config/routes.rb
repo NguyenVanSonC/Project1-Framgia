@@ -8,7 +8,10 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
   post "/products/rate", to: "rater#create", as: "rate"
+  get "/following", to: "following#index"
   resources :users
+  resources :products, only: %i(show)
+  resources :following, only: %i(create destroy)
   get "filter_items", to: "products#filter_products", as: "filter_items"
   resources :comments
   resources :products, only: %i(show) do

@@ -172,3 +172,6 @@ en:
       sure: "Are You Sure?"
       edit: "Edit"
       say: "Says : "
+  following:
+    index:
+      wishlist: "Wishlist"
