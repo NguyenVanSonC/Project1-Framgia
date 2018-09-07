@@ -4,7 +4,6 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find_by id: params[:id]
-    @following = Following.find_by_followed_id @product.id
     return if @product
     flash[:danger] = t "products.product_not_found"
     redirect_to root_path

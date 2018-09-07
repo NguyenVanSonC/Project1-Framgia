@@ -6,6 +6,9 @@ class User < ApplicationRecord
   ratyrate_rater
   attr_accessor :remember_token
   has_many :comments, dependent: :destroy
+
+  enum typeUser: {admin: 1, user: 2, shipper: 3}
+
   before_save :downcase_email
   validates :name, presence: true, length: {maximum: Settings.maxname}
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -45,6 +48,10 @@ class User < ApplicationRecord
 
   def forget
     update_attributes remember_digest: nil
+  end
+
+  def current_user? user
+    user == self
   end
 
   def authenticated? attribute, token

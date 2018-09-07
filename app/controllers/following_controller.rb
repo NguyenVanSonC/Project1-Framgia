@@ -13,7 +13,10 @@ class FollowingController < ApplicationController
           format.js{render :toggle}
         else
           format.html{redirect_to product_path(@id)}
-          format.js{render json: @following.errors, status: :unprocessable_entity}
+          format.js do
+            render json: @following.errors,
+            status: :unprocessable_entity
+          end
         end
       end
     else

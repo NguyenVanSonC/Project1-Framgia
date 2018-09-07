@@ -2,6 +2,6 @@
   <li><%= link_to sub_categories.name, filter_items_path(cate_id: sub_categories.id), remote: true %></li>
 <% else %>
   <ul>
-    <% render partial: "sub_categories",collection: sub_categories.child_cates, as: :sub_categories %>
+    <%= render partial: "categories/sub_categories", collection: sub_categories.childs, as: :sub_categories %>
   </ul>
 <% end %>

@@ -17,4 +17,10 @@ Rails.application.routes.draw do
   resources :products, only: %i(show) do
     resources :comments
   end
+  namespace :admin do
+    root "products#index"
+    resources :products, only: %i(index new create edit update destroy)
+    resources :categories, only: %i(index new create edit update destroy)
+    resources :users, only: %i(index destroy)
+  end
 end

@@ -1,0 +1,32 @@
+<tr class="tr-shadow">
+  <td class="desc"><%= user.name %></td>
+  <td>
+    <span class="block-email"><%= user.email %></span>
+  </td>
+  <td><%= user.address %></td>
+  <td><%= user.gender %></td>
+  <td><%= user.birthday %></td>
+  <% if user.typeUser == "shipper" %>
+    <td class="desc"><%= user.typeUser %></td>
+  <% else %>
+    <td>
+      <% if user.typeUser == "admin" %>
+        <span class="status--denied"><%= user.typeUser %></span>
+      <% elsif user.typeUser == "user" %>
+        <span class="status--process"><%= user.typeUser %></span>
+      <% end %>
+    </td>
+  <% end %>
+
+
+  <td>
+      <div class="table-data-feature">
+          <%= form_for user, url: {action: :destroy, namespace: :admin, controller: :users, id:           user}, method: :delete, confirm: "Sure", remote: true do |f| %>
+              <button class="item" data-toggle="tooltip" data-placement="top" title="Cancel">
+                  <i class="zmdi zmdi-delete"></i>
+              </button>
+          <% end %>
+      </div>
+  </td>
+</tr>
+<tr class="spacer"></tr>
