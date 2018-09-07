@@ -41,4 +41,12 @@ class UsersController < ApplicationController
     flash[:danger] = t "not_found"
     redirect_to root_url
   end
+
+  def correct_user
+    redirect_to root_url unless current_user.current_user? @user
+  end
+
+  def verify_admin!
+    redirect_to root_url unless current_user.admin?
+  end
 end

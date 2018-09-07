@@ -1,4 +1,5 @@
 <% if current_user.following? prd %>
+  <% @following = Following.find_by_followed_id @product.id %>
   <%= form_for @following, url: {action: :destroy, controller: :following, id: prd}, method: :delete, remote: true do |f| %>
     <button type="submit" class="btn add-to-wish">
       <h3 class="h3-follow"><i class="fa fa-heart"></i></h3>

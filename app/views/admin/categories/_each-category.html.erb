@@ -1,0 +1,30 @@
+<tr class="tr-shadow">
+    <% @parent = Category.find_by id: category.child_of %>
+    <td class="desc"><%= category.name %></td>
+    <% if @parent != nil %>
+        <td><%= @parent.name %></td>
+    <% else %>
+        <td></td>
+    <% end %>
+    <td><%= category.description %></td>
+    <td><%= category.updated_at %></td>
+    <td>
+        <div class="table-data-feature">
+            <!-- <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                <i class="zmdi zmdi-edit"></i>
+            </button> -->
+            <%= link_to edit_admin_category_path(category) do %>
+                <%= content_tag :button, "Edit", class: "item" %>
+            <% end %>
+
+
+            <%= form_for category, url: {action: :destroy, namespace: :admin, controller: :categories, id:           category}, method: :delete, remote: true do |f| %>
+                <button class="item" data-toggle="tooltip" data-placement="top" title="Cancel">
+                    <i class="zmdi zmdi-delete"></i>
+                </button>
+            <% end %>
+
+        </div>
+    </td>
+</tr>
+<tr class="spacer"></tr>

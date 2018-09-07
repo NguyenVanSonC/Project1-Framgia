@@ -1,0 +1,46 @@
+<tr class="tr-shadow">
+    <% @category = Category.find_by id: product.category_id %>
+    <% if @category != nil %>
+        <td><%= @category.name %></td>
+    <% else %>
+        <td></td>
+    <% end %>
+    <td class="desc"><%= product.name %></td>
+    <td><%= product.updated_at %></td>
+    <td>
+        <% if product.status == true %>
+            <span class="status--process">Còn hàng</span>
+        <% else %>
+            <span class="status--denied">Hết hàng</span>
+        <% end %>
+    </td>
+    <td>$<%= product.cost %></td>
+    <td>
+        <div class="table-data-feature">
+            <!--
+            <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                <i class="zmdi zmdi-edit"></i>
+            -->
+            </button>
+            <%= link_to edit_admin_product_path(product) do %>
+                <%= content_tag :button, "Edit", class: "item" %>
+            <% end %>
+            <!--
+            <%= form_for [:admin, product], url: edit_admin_product_path(product), method: :get, remote: true do |f| %>
+
+                <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                    <i class="zmdi zmdi-edit"></i>
+                </button>
+            <% end %>
+            -->
+
+            <%= form_for product, url: {action: :destroy, namespace: :admin, controller: :products, id: product}, method: :delete, remote: true do |f| %>
+                <button class="item" data-toggle="tooltip" data-placement="top" title="Cancel">
+                    <i class="zmdi zmdi-delete"></i>
+                </button>
+            <% end %>
+
+        </div>
+    </td>
+</tr>
+<tr class="spacer"></tr>

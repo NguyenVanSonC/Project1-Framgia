@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= full_title yield(:title) %></title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag "admin", media: "all",
+      "data-turbolinks-track": "reload" %>
+    <%= javascript_include_tag "admin", "data-turbolinks-track": "reload" %>
+    <%= render "layouts/shim" %>
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <%= render "layouts/admin/aside" %>
+      <div class="page-container">
+        <%= render "layouts/admin/header-desktop" %>
+        <div class="main-content">
+          <div class="section__content section__content--p30">
+            <div class="container-fluid">
+              <%= yield %>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </body>
+
+</html>
